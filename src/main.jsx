@@ -1,17 +1,23 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
-import { useContext } from "react";
-import { AppProvider } from "./Context/Context.jsx";
-// import { BrowserRouter as Router } from "react-router-dom";
-ReactDOM.createRoot(document.getElementById("root")).render(
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
+
+// ❌ REMOVE or COMMENT THIS LINE
+// import { AppProvider } from "./Context/Context.jsx";
+
+// ❌ REMOVE or COMMENT THIS LINE
+// Wrap with AppProvider only if context is used
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     <AppProvider>
+//       <App />
+//     </AppProvider>
+//   </React.StrictMode>
+// );
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <Router> */}
-      <AppProvider>
-        <App />
-      </AppProvider>
-    {/* </Router> */}
+    <App />
   </React.StrictMode>
 );
